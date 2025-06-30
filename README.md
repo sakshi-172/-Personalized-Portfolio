@@ -22,7 +22,7 @@ The website includes dynamic animations, theme toggle functionality, and integra
 - **Languages**: HTML5, CSS3, JavaScript  
 - **Frameworks**: Bootstrap 5  
 - **Libraries**: AOS (Animate On Scroll), Font Awesome  
-- **Tools**: VS Code, GitHub Pages (for hosting)
+- **Tools**: VS Code
 
 ---
 
