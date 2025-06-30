@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakshi Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body.light-theme {
+      background-color: #f8f9fa;
+      color: #000;
+    }
+
+    body.dark-theme {
+      background-color: #1e1e2f;
+      color: #f1f1f1;
+    }
+
+    body {
+      font-size: 1.1rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 1.5rem;
+    }
+
+    .left-bar {
+      width: 330px;
+      min-height: 100vh;
+      padding: 20px;
+      background-color: #2b2d42;
+      color: #fff;
+      box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .dark-theme .left-bar,
+    .dark-theme .navbar {
+      background-color: #2b2d42 !important;
+    }
+
+    .left-bar img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .left-bar a {
+      color: #4dd0e1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 6px 0;
+      text-decoration: none;
+    }
+
+    .left-bar p {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 6px 0;
+    }
+
+    .navbar {
+      background-color: #e9ecef;
+    }
+
+    .dark-theme .navbar .nav-link {
+      color: #f1f1f1 !important;
+    }
+
+    .nav-link {
+      cursor: pointer;
+    }
+
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      max-height: 100px;
+      object-fit: contain;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .dark-theme .theme-toggle {
+      color: #f1f1f1;
+    }
+
+    @media (max-width: 768px) {
+      .d-flex {
+        flex-direction: column;
+      }
+
+      .left-bar {
+        width: 100%;
+        min-height: auto;
+      }
+
+      .navbar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+      }
+
+      .card-container {
+        flex-direction: column;
+      }
+    }
+     .left-bar {
+    font-size: 1.2rem;
+  }
+  .left-bar img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  .left-bar h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .footer {
+    width: 100%;
+    background-color: #2b2d42;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+  } 
+  </style>
+</head>
+
+<body class="light-theme">
+  <div class="d-flex">
+    <div class="left-bar">
+      <img src="./profile.jpg" alt="Profile Photo">
+      <h5 class="mt-3">Sakshi</h5>
+      <p><i class="fas fa-map-marker-alt"></i> Dwarka Sec-15, New Delhi</p>
+      <p><i class="fas fa-phone"></i> +91 8459767400</p>
+      <p><i class="fas fa-envelope"></i> sakshibhagasara172@gmail.com</p>
+      <a href="https://www.linkedin.com/in/sakshi-653626259" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/sakshi-172" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="./Sakshi_resume.pdf" download class="btn btn-outline-info mt-3 w-100">
+      <i class="fas fa-download"></i> Download Resume
+</a>
+
+    </div>
+
+    <div class="flex-grow-1">
+      <nav class="navbar navbar-expand-lg navbar-light p-3">
+        <ul class="navbar-nav">
+          <li class="nav-item"><span class="nav-link" onclick="showSection('about')">About</span></li>
+          <li class="nav-item"><span class="nav-link" onclick="showSection('education')">Education</span></li>
+          <li class="nav-item"><span class="nav-link" onclick="showSection('experience')">Work Experience</span></li>
+          <li class="nav-item"><span class="nav-link" onclick="showSection('projects')">Projects</span></li>
+          <li class="nav-item"><span class="nav-link" onclick="showSection('skills')">Skills</span></li>
+          <li class="nav-item"><span class="nav-link" onclick="showSection('extra')">Extra-Curricular</span></li>
+        </ul>
+        <button class="theme-toggle ms-auto" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
+      </nav>
+
+      <div id="about" class="content-section active p-4">
+        <h3>About Me</h3>
+        <p>BTech student in Information Technology with hands-on experience in AI/ML, data analysis, and web technologies. Experienced in building deep learning models and web applications. Quick learner with strong problem-solving abilities, eager to learn and contribute to innovative tech solutions using emerging technologies like Python and AI/ML.</p>
+      </div>
+
+      <div id="education" class="content-section p-4">
+        <h3>Education</h3>
+        <div class="card-container">
+          <div class="card p-3 d-flex flex-row align-items-center">
+            <img src="./msit_logo.png" class="me-3">
+            <div>
+              <h5>B.Tech IT</h5>
+              <p>Maharaja Surajmal Institute of Technology, New Delhi<br>2022 - 2026<br>CGPA: 8.68</p>
+            </div>
+          </div>
+          <div class="card p-3 d-flex flex-row align-items-center">
+            <img src="./kms_logo.png" class="me-3">
+            <div>
+              <h5>Class 12th</h5>
+              <p>Kamal Model Sr. Sec. School, New Delhi<br>2020 - 2021<br>Percentage: 90.6%<br>Student Council Member</p>
+            </div>
+          </div>
+          <div class="card p-3 d-flex flex-row align-items-center">
+            <img src="./kms_logo.png" class="me-3">
+            <div>
+              <h5>Class 10th</h5>
+              <p>Kamal Model Sr. Sec. School, New Delhi<br>2018 - 2019<br>Percentage: 94.4%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="experience" class="content-section p-4">
+  <h3>Work Experience</h3>
+  <div class="card-container">
+    <div class="card p-4">
+      <h5>Summer Intern – Scientific Analysis Group (SAG), DRDO, New Delhi</h5>
+      <p><strong>June 2025 - Present</strong></p>
+      <ul>
+        <li>Implementing the research paper <strong>Neural Cleanse: Identifying and Mitigating Backdoor Attacks in Neural Networks</strong>.</li>
+        <li>Reverse-engineering backdoor triggers by generating minimal perturbation masks for each class.</li>
+        <li>Evaluating class-wise anomaly scores to identify potential backdoor attacks in deep neural networks.</li>
+        <li>Exploring adversarial robustness, model inversion, and explainable AI techniques.</li>
+        <li>Enhancing skills in Python, TensorFlow, and data visualization while working on real-world AI security systems.</li>
+      </ul>
+    </div>
+
+    <div class="card p-4">
+      <h5>Summer Intern – Scientific Analysis Group (SAG), DRDO, New Delhi</h5>
+      <p><strong>June 2024 - July 2024</strong></p>
+      <ul>
+        <li>First hands-on experience in the AI/ML domain through a cryptography project using neural networks.</li>
+        <li>Implemented classifiers like Logistic Regression, SVM, XGBoost, and CNN to develop a <strong>DL-Based differential distinguisher for the PRESENT cipher.</strong> </li>
+        <li>Handled tasks such as data preprocessing, network design, training/evaluation, and performance comparison.</li>
+        <li>Learned and applied AI techniques for cryptographic analysis and security evaluation.</li>
+        <li>Strengthened foundational understanding of machine learning and its application in real-world defense systems.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="projects" class="content-section p-4">
+  <h3>Projects</h3>
+  <div class="card-container">
+    <div class="card p-4">
+      <h5>Credit Card Fraud Detection</h5>
+      <p><strong>Tech Stack:</strong> Python, Scikit-learn, XGBoost, PyTorch, SHAP</p>
+      <ul>
+        <li>Developed an intelligent system to detect fraudulent transactions using both ML and DL approaches.</li>
+        <li>Addressed data imbalance issues to simulate real-world transaction behavior.</li>
+        <li>Trained models like XGBoost and TabNet and evaluated them using precision, recall, F1 score, and AUC.</li>
+        <li>Employed SHAP for model explainability to understand feature contributions.</li>
+        <li>ML and DL model comparison study was done to evaluate which algorithm could detect fraud with the highest accuracy.</li>
+      </ul>
+      <a href="https://github.com/sakshi-172" target="_blank" class="btn btn-outline-primary mt-2">See in GitHub</a>
+    </div>
+
+    <div class="card p-4">
+      <h5>DL-Based Differential Distinguisher for Cipher PRESENT</h5>
+      <p><strong>Tech Stack:</strong> Python, TensorFlow, Keras, CNN</p>
+      <ul>
+        <li>Conducted during a DRDO internship to explore AI-assisted cryptanalysis of lightweight ciphers.</li>
+        <li>Designed a CNN model to distinguish encrypted cipher outputs from random sequences.</li>
+        <li>Used supervised learning to analyze distributional differences in ciphertext data.</li>
+        <li>Compared performance with other models like Logistic Regression and SVM.</li>
+        <li>Demonstrated deep learning’s effectiveness in pattern recognition for cryptographic data.</li>
+      </ul>
+      <a href="https://github.com/sakshi-172" target="_blank" class="btn btn-outline-primary mt-2">See in GitHub</a>
+    </div>
+
+    <div class="card p-4">
+      <h5>Personalized Portfolio Website</h5>
+      <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Bootstrap, AOS</p>
+      <ul>
+        <li>Designed a responsive portfolio to highlight academic, technical, and project credentials.</li>
+        <li>Used modular layout with About, Education, Projects, and Skills sections.</li>
+        <li>Integrated AOS library for dynamic scroll-based animations.</li>
+        <li>Implemented theme toggle and interactive navigation for better UX.</li>
+        <li>Connected external profiles like GitHub and LinkedIn for professional reach.</li>
+      </ul>
+      <a href="https://github.com/sakshi-172" target="_blank" class="btn btn-outline-primary mt-2">See in GitHub</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="skills" class="content-section p-4">
+  <h3>Skills</h3>
+  <div class="card-container">
+    <div class="card p-3">
+      <h5>Technical Skills</h5>
+      <ul>
+        <li>C++</li>
+        <li>Data Structures and Algorithms (DSA)</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+      </ul>
+    </div>
+    <div class="card p-3">
+      <h5>Soft Skills</h5>
+      <ul>
+        <li>Problem Solving</li>
+        <li>Team Collaboration</li>
+        <li>Critical Thinking</li>
+        <li>Communication</li>
+        <li>Leadership</li>
+      </ul>
+    </div>
+    <div class="card p-3">
+      <h5>Core Concepts</h5>
+      <ul>
+        <li>OOPs (Object Oriented Programming)</li>
+        <li>DBMS (Database Management Systems)</li>
+        <li>Operating Systems</li>
+        <li>MySQL</li>
+      </ul>
+    </div>
+    <div class="card p-3">
+      <h5>Tools</h5>
+      <ul>
+        <li>Git & GitHub</li>
+        <li>VS Code</li>
+        <li>Google Colab</li>
+        <li>Jupyter Notebook</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div id="extra" class="content-section p-4">
+  <h3>Extra-Curricular</h3>
+  <div class="card-container">
+    <div class="card p-3">
+      <h5>Society Engagement</h5>
+      <p><strong>Active Member</strong> of <strong>ECELL MSIT</strong> and <strong>IIC MSIT</strong></p>
+      <p>Participated in planning, hosting, and engaging in technical events, startup showcases, and innovation challenges.</p>
+    </div>
+    <div class="card p-3">
+      <h5>Fest Volunteering</h5>
+      <p><strong>Volunteer</strong> in organizing <strong>Avensis</strong> (Technical Fest) and <strong>ENVA</strong> (Eco-Tech Fest) at MSIT.</p>
+      <p>Worked on event coordination, communication, and execution with team collaboration and leadership.</p>
+    </div>
+    <div class="card p-3">
+      <h5>Leadership Experience</h5>
+      <p>Student Council Member in Class 12th demonstrating teamwork and responsibility in managing school-level events.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© 2025 Sakshi | Designed & Developed with 💻</p>
+</footer>
+
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+      document.body.classList.toggle('light-theme');
+    }
+  </script>
+</body>
+
+</html>
