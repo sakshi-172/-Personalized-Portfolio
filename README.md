@@ -42,4 +42,4 @@ The website includes dynamic animations, theme toggle functionality, and integra
 ## 🚀 Hosting
 
 The website is deployed using **GitHub Pages** and can be accessed here:  
-[🔗 View Live Demo](https://yourusername.github.io/portfolio-website)
+[🔗 View Live Demo](https://sakshi-172.github.io/portfolio/)
