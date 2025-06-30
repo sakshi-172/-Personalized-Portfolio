@@ -37,9 +37,3 @@ The website includes dynamic animations, theme toggle functionality, and integra
 ### 🧑‍💼 Resume Download Button
 ![Download Resume](images/github-button.png)
 
----
-
-## 🚀 Hosting
-
-The website is deployed using **GitHub Pages** and can be accessed here:  
-[🔗 View Live Demo](https://sakshi-172.github.io/portfolio/)
